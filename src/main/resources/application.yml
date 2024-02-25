@@ -1,0 +1,21 @@
+server:
+  port: ${SERVER_PORT:2309}
+
+spring:
+  r2dbc:
+    url: ${DB_URL:r2dbc:postgresql://localhost:5432/rinha-db}
+    username: ${DB_USER:postgres}
+    password: ${DB_PASSWORD:12345}
+    pool:
+      max-idle-time: 60
+      max-size: 5
+      initial-size: 3
+  # Flyway
+  flyway:
+    url: ${DB_URL_FLYWAY:jdbc:postgresql://localhost:5432/rinha-db}
+    user: ${DB_USER:postgres}
+    password: ${DB_PASSWORD:12345}
+    enabled: true
+    baseline-on-migrate: true
+    sql-migration-separator: _
+    locations: classpath:migrations
