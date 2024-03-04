@@ -13,10 +13,11 @@ import java.time.LocalDateTime;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Transacao {
+public class Transaction {
     @Id
     private Long id;
     private String descricao;
     private char tipo;
+    private Long valor;
     private LocalDateTime realizadaEm;
 }

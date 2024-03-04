@@ -3,9 +3,9 @@ server:
 
 spring:
   r2dbc:
-    url: ${DB_URL:r2dbc:postgresql://localhost:5432/rinha-db}
+    url: ${DB_URL:r2dbc:postgresql://localhost:5432/postgres}
     username: ${DB_USER:postgres}
-    password: ${DB_PASSWORD:12345}
+    password: ${DB_PASSWORD:123}
     pool:
       max-idle-time: 60
       max-size: 5
